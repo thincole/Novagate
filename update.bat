@@ -30,7 +30,7 @@ powershell -NoProfile -Command "Get-CimInstance Win32_Process -ErrorAction Silen
 rem 2. Sao luu file cau hinh cai dat
 set "SETTINGS_BAK=%TEMP%\novagate_settings_backup_%RANDOM%.json"
 if exist "seedvis_settings.json" (
-    echo [*] Dang sao luu cau hinh (API Key, Client ID...)...
+    echo [*] Dang sao luu cau hinh API Key va Client ID...
     copy /y "seedvis_settings.json" "!SETTINGS_BAK!" >nul 2>&1
 )
 
@@ -79,7 +79,7 @@ if !errorlevel! equ 0 (
 rem Fallback neu khong co Git hoac Git loi
 if !UPDATE_SUCCESS! neq 1 (
     echo.
-    echo [*] Dang tai ban cap nhat truc tiep tu GitHub (ZIP fallback)...
+    echo [*] Dang tai ban cap nhat truc tiep tu GitHub - ZIP fallback...
     set "ZIP_TEMP=%TEMP%\novagate_main_%RANDOM%.zip"
     set "DIR_TEMP=%TEMP%\novagate_extract_%RANDOM%"
 
