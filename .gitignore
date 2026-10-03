@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+temp_render/
+output_seedvis/
+seedvis_settings.json
+settings.json
+log.txt
+logseedvis.txt
+crash_log.txt
+*.log
+*.rar
+dist/
+build/
